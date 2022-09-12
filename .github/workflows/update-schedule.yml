@@ -1,0 +1,11 @@
+name: update schedule
+on:
+  schedule:
+  - cron: '10 * * * *'
+
+jobs:
+  print-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: execute echo command
+        run: echo "Hello World!"
