@@ -2,6 +2,7 @@ name: update schedule
 on:
   schedule:
   - cron: '10 * * * *'
+  workflow_dispatch:
 
 jobs:
   print-hello-world:
