@@ -12,6 +12,16 @@
   align-items: center;
 }
 
+.table {
+  border-collapse:collapse;
+}
+
+.tableItem,
+.tableTitle,
+.tableTime {
+  border: 1px solid black;
+}
+
 .footer {
   display: flex;
   flex: 1;

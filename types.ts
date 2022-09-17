@@ -29,7 +29,7 @@ export type ScheduleItem = {
 export type Schedule = {
     start: string,
     spl2Gachi: ScheduleItem | null,
-    spl2League?: ScheduleItem | null,
-    spl3Challenge?: ScheduleItem | null,
-    spl3Open?: ScheduleItem | null
+    spl2League: ScheduleItem | null,
+    spl3Challenge: ScheduleItem | null,
+    spl3Open: ScheduleItem | null
 };
