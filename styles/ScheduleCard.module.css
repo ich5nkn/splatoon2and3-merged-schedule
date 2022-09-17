@@ -1,0 +1,48 @@
+.main {
+    display: flex;
+    padding: 1rem 0;
+}
+
+.version2 {
+    color: #FF488B;
+    font-weight: bold;
+}
+
+.version3 {
+    color: #F7F350;
+    font-weight: bold;
+}
+
+.rule {
+    display: flex;
+    padding: 0.25rem 0;
+}
+
+.ruleIcon {
+    height: 2rem;
+    width: 2rem;
+}
+
+.ruleName {
+    padding-left: 0.5rem;
+    line-height: 2rem;
+    font-size: large;
+    font-weight: bold;
+}
+
+.time {
+    width: 3rem;
+}
+
+.itemMain {
+    padding: 0.75rem 0;
+}
+
+.itemTitle {
+    font-size: large;
+    font-weight: 700;
+}
+
+.map {
+    padding-left: 1rem;
+}

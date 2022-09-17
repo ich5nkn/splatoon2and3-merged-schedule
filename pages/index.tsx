@@ -73,28 +73,10 @@ const Home: NextPage<PageProps> = ({schedules}) => {
   )
 
   return (
-    <div className={styles.main}>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <th className={styles.tableTitle}>時間帯</th>
-            <th className={styles.tableTitle}>スプラ２ ガチマ</th>
-            <th className={styles.tableTitle}>スプラ２ リグマ</th>
-            <th className={styles.tableTitle}>スプラ３ チャレンジ</th>
-            <th className={styles.tableTitle}>スプラ３ オープン</th>
-          </tr>
-          {schedules.map(schedule => (
-            <tr className="schedule" key={schedule.start}>
-              <td className={styles.tableTime}>{schedule.start}</td>
-              <td className={styles.tableItem}><ScheduleCard item={schedule.spl2Gachi} /></td>
-              <td className={styles.tableItem}><ScheduleCard item={schedule.spl2League} /></td>
-              <td className={styles.tableItem}><ScheduleCard item={schedule.spl3Challenge} /></td>
-              <td className={styles.tableItem}><ScheduleCard item={schedule.spl3Open} /></td>
-            </tr>
-          ))}
-        </thead>
-      </table>
-      
+    <div className={styles.main}>  
+      {schedules.map(schedule => (
+        <ScheduleCard schedule={schedule} key={schedule.start} />
+      ))}
     </div>
   )
 }

@@ -8,9 +8,9 @@ export const getStartDate = (dateString: string) => {
 
 export const ruleMapping = (rule?: string) => {
     if (!rule) return ''
-    if (rule === 'ガチホコバトル') return 'ホコ';
-    if (rule === 'ガチエリア') return 'エリア';
-    if (rule === 'ガチヤグラ') return 'ヤグラ';
-    if (rule === 'ガチアサリ') return 'アサリ';
+    if (rule === 'ガチホコバトル') return 'hoko.png';
+    if (rule === 'ガチエリア') return 'area.png';
+    if (rule === 'ガチヤグラ') return 'yagura.png';
+    if (rule === 'ガチアサリ') return 'asari.png';
     return rule;
 };
