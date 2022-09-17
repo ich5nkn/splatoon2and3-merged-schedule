@@ -4,7 +4,7 @@ import * as path from 'path'
 
 import styles from '../styles/Home.module.css'
 import { Schedule, ScheduleItem, Spl2Response, Spl3Response } from '../types'
-import { getStartDate, ruleMapping } from '../utils'
+import { getStartDate } from '../utils'
 import { ScheduleCard } from '../components/ScheduleItem';
 
 type PageProps = { schedules?: Schedule[] }
