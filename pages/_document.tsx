@@ -12,6 +12,7 @@ class MyDocument extends Document {
             <meta property="og:type" content="website" />
             <meta property="og:image" content="https://ich5nkn.github.io/splatoon2and3-merged-schedule/ogp.png" />
             <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@splich5" />
         </Head>
         <body>
           <Main />
