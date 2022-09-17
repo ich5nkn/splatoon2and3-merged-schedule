@@ -14,7 +14,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   const timeTable: string[] = [];
   const spl2GachiResponse = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'spl2_gachi.json'), 'utf-8')) as Spl2Response
   const spl2Gachi: FormattedSchedule = spl2GachiResponse.result.map(res => {
-    const start = getStartDate(res.start);
+    const start = getStartDate(`${res.start}+09:00`);
     if(!timeTable.some(time => time === start)) timeTable.push(start);
     return {
       start,
@@ -24,7 +24,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   }});
   const spl2LeagueResponse = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'spl2_league.json'), 'utf-8')) as Spl2Response
   const spl2League: FormattedSchedule = spl2LeagueResponse.result.map(res => {
-    const start = getStartDate(res.start);
+    const start = getStartDate(`${res.start}+09:00`);
     if(!timeTable.some(time => time === start)) timeTable.push(start);
     return {
       start,
