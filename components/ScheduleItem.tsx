@@ -7,6 +7,13 @@ interface ScheduleCardProps {
 }
 
 export const ScheduleCard = ({ schedule }: ScheduleCardProps) => {
+    const year = new Date().getFullYear()
+    const startDate = new Date(`${year}/${schedule.start}`);
+    const endDate = startDate.setHours(startDate.getHours() + 2);
+    const isOver = Date.now() > endDate
+
+    if(isOver) return null;
+
     return (
         <div className={styles.main}>
             <div className={styles.time}>{schedule.start}</div>
