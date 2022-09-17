@@ -1,8 +1,9 @@
 export const getStartDate = (dateString: string) => {
     const date = new Date(dateString);
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-    const hour = `${date.getHours()}`.padStart(2, '0');
+    const jst = new Date(date.getTime() + ((new Date().getTimezoneOffset() + (9 * 60)) * 60 * 1000));
+    const month = jst.getMonth() + 1;
+    const day = jst.getDate();
+    const hour = `${jst.getHours()}`.padStart(2, '0');
     return `${month}/${day} ${hour}:00`
 };
 
